@@ -1,0 +1,89 @@
+.about
+    background-color: #f3f3f9
+    padding-bottom: 130px
+    h1
+        font-size: 2.5rem
+        font-weight: lighter
+        text-align: center
+        margin-bottom: 30px
+        
+    p
+        width: 70%
+        margin: 0 auto
+        text-align: center
+        font-size: 1.1em
+
+    .about-mission
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        margin: 75px 35px 0
+        +mw(680px)
+            margin: 25px 35px 0
+            flex-direction: column
+        +mw(500px)
+            margin: 25px 0 0
+        &_img
+            max-width: 48%
+            border-radius: 8px
+            +mw(680px)
+                max-width: 80%
+                margin-bottom: 30px
+            img
+                width: 100%
+
+        .about-list
+            max-width: 50%
+            padding-left: 30px
+            +mw(680px)
+                max-width: 100%
+                padding-left: 0
+            &_item
+                width: 85%
+                text-align: left
+                margin: 0 0 15px 50px
+                font-size: 1.3rem
+                padding-left: 59px
+                +mw(1060px)
+                    font-size: 1.1rem
+                    padding-left: 25px
+                    margin: 0 0 15px 0
+                +mw(800px)
+                    font-size: 1rem
+                    margin: 0 0 15px 10px
+                +mw(680px)
+                    font-size: 1.3rem
+                    margin: 0 0 25px 30px
+                +mw(500px)
+                    font-size: 1.1rem
+                    margin: 0 0 25px 20px
+                &:first-letter
+                    color: red
+                    font-weight: bold
+
+            .about-button
+                position: relative
+                width: 224px
+                text-align: center
+                margin: 50px 0 0 100px
+                +mw(1060px)
+                    width: 150px
+                    margin: 30px 0 0 80px
+                +mw(1060px)
+                    margin: 30px 0 0 40px
+                +mw(680px)
+                    margin: 0 auto
+                &_img
+                    width: 100%
+                &_text
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translateY(-50%) translateX(-50%)
+                    text-transform: uppercase
+                    font-size: 1.5rem
+                    color: #fff
+                    font-weight: 900
+                    +mw(1060px)
+                        font-size: 1rem
+                        

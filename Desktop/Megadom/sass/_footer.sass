@@ -1,0 +1,59 @@
+.footer
+    background-color: #a2d9f7
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 45px 0
+    +mw(680px)
+        flex-direction: column
+    .footer-text
+        width: 50%
+        text-align: right
+        +mw(680px)
+            width: 100%
+            padding-bottom: 40px
+            
+        p
+            width: 100%
+            text-align: right
+            padding-left: 35%
+            font-size: 1.2rem
+            +mw(680px)
+                text-align: center
+                padding-left: 0
+                width: 70%
+                margin: 0 auto
+            
+    .footer-button_wrapper
+        width: 50%
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        padding-left: 80px
+        +mw(1060px)
+            padding-left: 40px
+        +mw(680px)
+            padding-left: 0
+        
+        .footer-button
+            position: relative
+            width: 224px
+            text-align: center
+
+            +mw(1060px)
+                width: 180px      
+            +mw(680px)
+                margin: 0 auto        
+            &_img
+                width: 100%
+            &_text
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translateY(-50%) translateX(-50%)
+                text-transform: uppercase
+                font-size: 1.5rem
+                color: #fff
+                font-weight: 900
+                +mw(1060px)
+                    font-size: 1rem

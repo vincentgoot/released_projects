@@ -1,0 +1,61 @@
+.services
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    color: #fff
+    .service-item
+        width: 25%        
+        min-height: 250px
+        background-color: purple
+        padding: 30px 30px 15px 
+        text-align: justify
+        position: relative
+        font-size: 1.1rem
+        line-height: 1
+        +mw(970px)
+            width: 50%
+            line-height: 1
+        +mw(550px)
+            width: 100%
+            font-size: 1.3rem
+            line-height: 1
+            min-width: 330px
+
+        h2
+            font-size: 2rem 
+            margin-left: 10px
+        a 
+            position: absolute
+            right: 25px
+            bottom: 17px
+            color: #fff
+            img
+                width: 200px
+                +mw(970px)
+                    width: 150px
+            span
+                position: absolute
+                text-transform: uppercase
+                +mw(970px)
+                    font-size: 0.9rem
+            #serv-button-text-1
+                top: 50%
+                left: 50%
+                transform: translateY(-50%) translateX(-50%)
+            #serv-button-text-2
+                right: 25px
+                bottom: 22px
+                +mw(970px)
+                    top: 35%
+                    left: 14%
+
+
+    #service-item-1
+        color: #2b2a29
+        background-color: #a2d9f7
+    #service-item-2
+        background-color: #1e5fba
+    #service-item-3
+        background-color: #393185
+    #service-item-4
+        background-color: #322a60

@@ -1,0 +1,645 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  font-family: Noto Sans, sans-serif;
+  color: #2b2a29; }
+
+body {
+  padding: 0;
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: Noto Sans, sans-serif; }
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1366px; }
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.bold {
+  font-weight: 900; }
+
+header {
+  min-height: 940px;
+  padding: 30px 50px 0;
+  position: relative; }
+  @media (max-width: 1024px) {
+    header {
+      min-height: 768px; } }
+  @media (max-width: 630px) {
+    header {
+      min-height: 600px; } }
+  @media (max-width: 450px) {
+    header {
+      min-height: 400px; } }
+  header .bg-video {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100; }
+    header .bg-video video {
+      height: 100%; }
+  header .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 630px) {
+      header .navbar {
+        flex-direction: column; } }
+    header .navbar .logo {
+      color: #fff;
+      display: flex;
+      align-items: center; }
+      header .navbar .logo img {
+        width: 3rem;
+        margin-right: 10px; }
+      header .navbar .logo p {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        font-weight: 600; }
+        @media (max-width: 630px) {
+          header .navbar .logo p {
+            width: 150px; } }
+        header .navbar .logo p .logo-text {
+          font-size: 1rem; }
+          @media (max-width: 630px) {
+            header .navbar .logo p .logo-text {
+              font-size: 1.5rem; } }
+        header .navbar .logo p .logo-text-bottom {
+          font-size: 0.7rem; }
+          @media (max-width: 630px) {
+            header .navbar .logo p .logo-text-bottom {
+              font-size: 1.1rem; } }
+    header .navbar nav {
+      min-width: 42%;
+      margin-left: 60px; }
+      @media (max-width: 1024px) {
+        header .navbar nav {
+          min-width: 55%;
+          margin-left: 0; } }
+      @media (max-width: 768px) {
+        header .navbar nav {
+          min-width: 60%; } }
+      @media (max-width: 630px) {
+        header .navbar nav {
+          min-width: 100%;
+          margin-top: 20px; } }
+      @media (max-width: 450px) {
+        header .navbar nav {
+          display: none; } }
+      header .navbar nav .navlinks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        header .navbar nav .navlinks a {
+          color: #fff;
+          font-weight: 300;
+          font-size: 1.2rem; }
+          @media (max-width: 1024px) {
+            header .navbar nav .navlinks a {
+              font-size: 1rem;
+              font-weight: bolder; } }
+          @media (max-width: 768px) {
+            header .navbar nav .navlinks a {
+              font-size: 1rem;
+              font-weight: bolder;
+              margin-left: 20px; } }
+          @media (max-width: 630px) {
+            header .navbar nav .navlinks a {
+              font-size: 1rem;
+              font-weight: bolder;
+              margin-left: 0; } }
+    header .navbar .logo-right img {
+      width: 3rem;
+      margin-right: -25px; }
+      @media (max-width: 768px) {
+        header .navbar .logo-right img {
+          display: none; } }
+  header .main-header {
+    max-width: 510px;
+    margin: 230px auto 0; }
+    @media (max-width: 768px) {
+      header .main-header {
+        margin: 100px auto 0; } }
+    @media (max-width: 450px) {
+      header .main-header {
+        margin: 50px auto 0; } }
+    header .main-header h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      font-size: 48px; }
+      @media (max-width: 1024px) {
+        header .main-header h1 {
+          font-size: 36px; } }
+      @media (max-width: 460px) {
+        header .main-header h1 {
+          font-size: 25px; } }
+    header .main-header .header-button {
+      text-align: center;
+      position: relative;
+      width: 210px;
+      margin: 0 auto; }
+      header .main-header .header-button img {
+        width: 100%; }
+      header .main-header .header-button span {
+        position: absolute;
+        top: 16px;
+        left: 42px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 900;
+        font-size: 1.5rem;
+        letter-spacing: 3px; }
+
+.services {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff; }
+  .services .service-item {
+    width: 25%;
+    min-height: 250px;
+    background-color: purple;
+    padding: 30px 30px 15px;
+    text-align: justify;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1; }
+    @media (max-width: 970px) {
+      .services .service-item {
+        width: 50%;
+        line-height: 1; } }
+    @media (max-width: 550px) {
+      .services .service-item {
+        width: 100%;
+        font-size: 1.3rem;
+        line-height: 1;
+        min-width: 330px; } }
+    .services .service-item h2 {
+      font-size: 2rem;
+      margin-left: 10px; }
+    .services .service-item a {
+      position: absolute;
+      right: 25px;
+      bottom: 17px;
+      color: #fff; }
+      .services .service-item a img {
+        width: 200px; }
+        @media (max-width: 970px) {
+          .services .service-item a img {
+            width: 150px; } }
+      .services .service-item a span {
+        position: absolute;
+        text-transform: uppercase; }
+        @media (max-width: 970px) {
+          .services .service-item a span {
+            font-size: 0.9rem; } }
+      .services .service-item a #serv-button-text-1 {
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%); }
+      .services .service-item a #serv-button-text-2 {
+        right: 25px;
+        bottom: 22px; }
+        @media (max-width: 970px) {
+          .services .service-item a #serv-button-text-2 {
+            top: 35%;
+            left: 14%; } }
+  .services #service-item-1 {
+    color: #2b2a29;
+    background-color: #a2d9f7; }
+  .services #service-item-2 {
+    background-color: #1e5fba; }
+  .services #service-item-3 {
+    background-color: #393185; }
+  .services #service-item-4 {
+    background-color: #322a60; }
+
+.advantages {
+  padding: 60px 60px 240px; }
+  @media (max-width: 590px) {
+    .advantages {
+      padding: 60px 30px 50px; } }
+  .advantages h4 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    font-weight: lighter; }
+    @media (max-width: 720px) {
+      .advantages h4 {
+        font-size: 2rem; } }
+  .advantages .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center; }
+    @media (max-width: 590px) {
+      .advantages .advantages-list {
+        justify-content: center; } }
+    .advantages .advantages-list .advantages-item {
+      width: 30%; }
+      @media (max-width: 960px) {
+        .advantages .advantages-list .advantages-item {
+          width: 45%;
+          margin-bottom: 20px; } }
+      @media (max-width: 590px) {
+        .advantages .advantages-list .advantages-item {
+          width: 90%;
+          margin-bottom: 20px; } }
+      .advantages .advantages-list .advantages-item h3 {
+        margin-top: 10px; }
+      .advantages .advantages-list .advantages-item img {
+        max-width: 100px;
+        height: 80px; }
+      .advantages .advantages-list .advantages-item p {
+        font-size: 1.2rem; }
+        @media (max-width: 590px) {
+          .advantages .advantages-list .advantages-item p {
+            font-size: 1.1rem; } }
+
+.about {
+  background-color: #f3f3f9;
+  padding-bottom: 130px; }
+  .about h1 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 30px; }
+  .about p {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1em; }
+  .about .about-mission {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 75px 35px 0; }
+    @media (max-width: 680px) {
+      .about .about-mission {
+        margin: 25px 35px 0;
+        flex-direction: column; } }
+    @media (max-width: 500px) {
+      .about .about-mission {
+        margin: 25px 0 0; } }
+    .about .about-mission_img {
+      max-width: 48%;
+      border-radius: 8px; }
+      @media (max-width: 680px) {
+        .about .about-mission_img {
+          max-width: 80%;
+          margin-bottom: 30px; } }
+      .about .about-mission_img img {
+        width: 100%; }
+    .about .about-mission .about-list {
+      max-width: 50%;
+      padding-left: 30px; }
+      @media (max-width: 680px) {
+        .about .about-mission .about-list {
+          max-width: 100%;
+          padding-left: 0; } }
+      .about .about-mission .about-list_item {
+        width: 85%;
+        text-align: left;
+        margin: 0 0 15px 50px;
+        font-size: 1.3rem;
+        padding-left: 59px; }
+        @media (max-width: 1060px) {
+          .about .about-mission .about-list_item {
+            font-size: 1.1rem;
+            padding-left: 25px;
+            margin: 0 0 15px 0; } }
+        @media (max-width: 800px) {
+          .about .about-mission .about-list_item {
+            font-size: 1rem;
+            margin: 0 0 15px 10px; } }
+        @media (max-width: 680px) {
+          .about .about-mission .about-list_item {
+            font-size: 1.3rem;
+            margin: 0 0 25px 30px; } }
+        @media (max-width: 500px) {
+          .about .about-mission .about-list_item {
+            font-size: 1.1rem;
+            margin: 0 0 25px 20px; } }
+        .about .about-mission .about-list_item:first-letter {
+          color: red;
+          font-weight: bold; }
+      .about .about-mission .about-list .about-button {
+        position: relative;
+        width: 224px;
+        text-align: center;
+        margin: 50px 0 0 100px; }
+        @media (max-width: 1060px) {
+          .about .about-mission .about-list .about-button {
+            width: 150px;
+            margin: 30px 0 0 80px; } }
+        @media (max-width: 1060px) {
+          .about .about-mission .about-list .about-button {
+            margin: 30px 0 0 40px; } }
+        @media (max-width: 680px) {
+          .about .about-mission .about-list .about-button {
+            margin: 0 auto; } }
+        .about .about-mission .about-list .about-button_img {
+          width: 100%; }
+        .about .about-mission .about-list .about-button_text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          color: #fff;
+          font-weight: 900; }
+          @media (max-width: 1060px) {
+            .about .about-mission .about-list .about-button_text {
+              font-size: 1rem; } }
+
+.mortgage {
+  background-color: #393185;
+  padding: 90px 75px;
+  color: #fff; }
+  @media (max-width: 650px) {
+    .mortgage {
+      padding: 40px 20px 40px 30px; } }
+  .mortgage h1 {
+    font-weight: lighter;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 40px; }
+  .mortgage-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 1000px) {
+      .mortgage-wrapper {
+        justify-content: center; } }
+  .mortgage-text {
+    width: 35%;
+    padding: 0 20px; }
+    @media (max-width: 1000px) {
+      .mortgage-text {
+        width: 75%; } }
+    @media (max-width: 650px) {
+      .mortgage-text {
+        width: 85%;
+        padding: 0;
+        text-align: justify; } }
+    .mortgage-text_quotes {
+      width: 40px; }
+    .mortgage-text_text {
+      font-size: 1rem; }
+      @media (max-width: 1000px) {
+        .mortgage-text_text {
+          font-size: 1.2rem; } }
+      @media (max-width: 860px) {
+        .mortgage-text_text {
+          font-size: 1rem;
+          padding-bottom: 20px; } }
+  .mortgage-graph {
+    width: 45%;
+    padding: 0 0 0 20px;
+    position: relative; }
+    @media (max-width: 1000px) {
+      .mortgage-graph {
+        width: 65%; } }
+    @media (max-width: 860px) {
+      .mortgage-graph {
+        font-size: 0.9rem; } }
+    @media (max-width: 650px) {
+      .mortgage-graph {
+        font-size: 0.8rem;
+        width: 70%;
+        margin-left: 30px; } }
+    @media (max-width: 480px) {
+      .mortgage-graph {
+        font-size: 0.6rem;
+        width: 70%; } }
+    .mortgage-graph_img {
+      width: 90%; }
+    .mortgage-graph #num1 {
+      position: absolute;
+      top: 10%;
+      left: -1%; }
+    .mortgage-graph #num2 {
+      position: absolute;
+      top: 50%;
+      left: -5%; }
+    .mortgage-graph #num3 {
+      position: absolute;
+      bottom: 3%;
+      left: -2%; }
+    .mortgage-graph #num4 {
+      position: absolute;
+      bottom: -5%;
+      left: 8%; }
+    .mortgage-graph #num5 {
+      position: absolute;
+      bottom: -5%;
+      left: 40%; }
+    .mortgage-graph #num6 {
+      position: absolute;
+      bottom: -5%;
+      left: 75%; }
+  .mortgage-circles {
+    width: 15%; }
+    .mortgage-circles_item {
+      margin-bottom: 30px;
+      width: 120px;
+      position: relative; }
+      @media (max-width: 860px) {
+        .mortgage-circles_item {
+          width: 80px; } }
+      @media (max-width: 650px) {
+        .mortgage-circles_item {
+          width: 50px; } }
+      .mortgage-circles_item img {
+        width: 100%; }
+      .mortgage-circles_item span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 1.1rem; }
+        @media (max-width: 860px) {
+          .mortgage-circles_item span {
+            font-size: 1rem; } }
+        @media (max-width: 650px) {
+          .mortgage-circles_item span {
+            font-size: 0.7rem; } }
+
+.conditions {
+  background-color: #fefefe;
+  padding: 250px 50px 100px; }
+  @media (max-width: 800px) {
+    .conditions {
+      padding: 100px 30px 50px; } }
+  .conditions h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 70px;
+    font-weight: lighter;
+    color: #2b2a29; }
+  .conditions-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #82828d; }
+    @media (max-width: 510px) {
+      .conditions-list {
+        justify-content: center; } }
+    .conditions-list_item {
+      width: 23%;
+      text-align: center;
+      position: relative; }
+      @media (max-width: 930px) {
+        .conditions-list_item {
+          width: 48%; } }
+      @media (max-width: 510px) {
+        .conditions-list_item {
+          width: 95%; } }
+      .conditions-list_item img {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        z-index: 100; }
+        @media (max-width: 510px) {
+          .conditions-list_item img {
+            width: 40%; } }
+      .conditions-list_item h4 {
+        padding-top: 180px;
+        font-size: 1.2rem;
+        font-weight: lighter; }
+        @media (max-width: 930px) {
+          .conditions-list_item h4 {
+            padding-top: 260px; } }
+        @media (max-width: 800px) {
+          .conditions-list_item h4 {
+            padding-top: 250px; } }
+        @media (max-width: 700px) {
+          .conditions-list_item h4 {
+            padding-top: 200px; } }
+        @media (max-width: 510px) {
+          .conditions-list_item h4 {
+            padding-top: 220px; } }
+      .conditions-list_item p {
+        width: 90%;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        line-height: 1.4; }
+      .conditions-list_item span {
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        font-size: 3.5rem;
+        font-weight: bold;
+        opacity: 0.1;
+        z-index: 0; }
+        @media (max-width: 1100px) {
+          .conditions-list_item span {
+            right: 20px; } }
+        @media (max-width: 930px) {
+          .conditions-list_item span {
+            font-size: 6rem; } }
+        @media (max-width: 800px) {
+          .conditions-list_item span {
+            right: 0px;
+            font-size: 5rem; } }
+        @media (max-width: 510px) {
+          .conditions-list_item span {
+            font-size: 6rem;
+            right: 30px;
+            top: 0; } }
+        @media (max-width: 400px) {
+          .conditions-list_item span {
+            font-size: 4.5rem;
+            right: 30px; } }
+
+.footer {
+  background-color: #a2d9f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 0; }
+  @media (max-width: 680px) {
+    .footer {
+      flex-direction: column; } }
+  .footer .footer-text {
+    width: 50%;
+    text-align: right; }
+    @media (max-width: 680px) {
+      .footer .footer-text {
+        width: 100%;
+        padding-bottom: 40px; } }
+    .footer .footer-text p {
+      width: 100%;
+      text-align: right;
+      padding-left: 35%;
+      font-size: 1.2rem; }
+      @media (max-width: 680px) {
+        .footer .footer-text p {
+          text-align: center;
+          padding-left: 0;
+          width: 70%;
+          margin: 0 auto; } }
+  .footer .footer-button_wrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 80px; }
+    @media (max-width: 1060px) {
+      .footer .footer-button_wrapper {
+        padding-left: 40px; } }
+    @media (max-width: 680px) {
+      .footer .footer-button_wrapper {
+        padding-left: 0; } }
+    .footer .footer-button_wrapper .footer-button {
+      position: relative;
+      width: 224px;
+      text-align: center; }
+      @media (max-width: 1060px) {
+        .footer .footer-button_wrapper .footer-button {
+          width: 180px; } }
+      @media (max-width: 680px) {
+        .footer .footer-button_wrapper .footer-button {
+          margin: 0 auto; } }
+      .footer .footer-button_wrapper .footer-button_img {
+        width: 100%; }
+      .footer .footer-button_wrapper .footer-button_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 900; }
+        @media (max-width: 1060px) {
+          .footer .footer-button_wrapper .footer-button_text {
+            font-size: 1rem; } }
+
+/*# sourceMappingURL=styles.css.map */

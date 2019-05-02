@@ -1,0 +1,127 @@
+header
+    min-height: 940px
+    padding: 30px 50px 0
+    position: relative
+    +mw($m)
+        min-height: 768px
+    +mw(630px)
+        min-height: 600px
+    +mw(450px)
+        min-height: 400px
+    .bg-video
+        position: absolute
+        overflow: hidden
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -100
+        video
+            height: 100%
+    .navbar
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        +mw(630px)
+            flex-direction: column
+        .logo
+            color: #fff
+            display: flex
+            align-items: center
+            img
+                width: 3rem
+                margin-right: 10px
+            p
+                display: flex
+                flex-direction: column
+                width: 100px
+                font-weight: 600
+                +mw(630px)
+                    width: 150px
+                .logo-text
+                    font-size: 1rem
+                    +mw(630px)
+                        font-size: 1.5rem
+                .logo-text-bottom
+                    font-size: 0.7rem     
+                    +mw(630px)
+                        font-size: 1.1rem     
+        nav
+            min-width: 42%
+            margin-left: 60px
+            +mw($m)
+                min-width: 55%
+                margin-left: 0
+            +mw($s)
+                min-width: 60%
+            +mw(630px)
+                min-width: 100%
+                margin-top: 20px
+            +mw(450px)
+                display: none
+            
+            .navlinks
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+                a
+                    color: #fff
+                    font-weight: 300
+                    font-size: 1.2rem
+                    +mw($m)
+                        font-size: 1rem
+                        font-weight: bolder
+                    +mw($s)
+                        font-size: 1rem
+                        font-weight: bolder
+                        margin-left: 20px
+                    +mw(630px)
+                        font-size: 1rem
+                        font-weight: bolder
+                        margin-left: 0
+                                    
+        .logo-right
+            img
+                width: 3rem 
+                margin-right: -25px
+                +mw($s)
+                    display: none      
+
+
+    .main-header
+        max-width: 510px
+        margin: 230px auto 0
+        +mw($s)
+            margin: 100px auto 0
+        +mw(450px)
+            margin: 50px auto 0
+
+        h1
+            text-align: center
+            color: #fff
+            margin-bottom: 30px
+            letter-spacing: 2px
+            font-size: 48px
+            +mw($m)
+                font-size: 36px       
+            +mw(460px)
+                font-size: 25px
+        .header-button
+            text-align: center
+            position: relative
+            width: 210px
+            margin: 0 auto
+            img
+                width: 100%
+            span
+                position: absolute
+                top: 16px
+                left: 42px
+                text-transform: uppercase
+                color: #fff
+                font-weight: 900
+                font-size: 1.5rem
+                letter-spacing: 3px
+
+
