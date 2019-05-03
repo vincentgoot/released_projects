@@ -1,3 +1,13 @@
+#shade
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0, 0.6)
+    z-index: 100
+    display: none
+    
 header
     min-height: 940px
     padding: 30px 50px 0
@@ -18,12 +28,13 @@ header
         z-index: -100
         video
             height: 100%
+            transform: translate(-10%)
     .navbar
         display: flex
         flex-wrap: wrap
         justify-content: space-between
         align-items: center
-        +mw(630px)
+        +mw(700px)
             flex-direction: column
         .logo
             color: #fff
@@ -35,8 +46,9 @@ header
             p
                 display: flex
                 flex-direction: column
-                width: 100px
+                width: 90px
                 font-weight: 600
+                text-align: center
                 +mw(630px)
                     width: 150px
                 .logo-text
@@ -50,6 +62,73 @@ header
         nav
             min-width: 42%
             margin-left: 60px
+            .burger-menu
+                position: fixed
+                top: 0px
+                left: 0  
+                z-index: 900
+                display: none
+                +mw(700px)
+                    display: block
+                .burger-btn
+                    position: relative                   
+                    display: block
+                    width: 80px
+                    height: 80px
+                    background-color: #f33
+                    span,
+                    span:before,
+                    span:after
+                        display: block
+                        position: absolute
+                        margin-top: -2px
+                        top: 50%
+                        left: 50%
+                        transform: translateX(-50%)
+                        width: 30px
+                        height: 4px
+                        background-color: #fff
+                    span:before,
+                    span:after
+                            content: ''
+                            display: block
+                            transition: 0.2s
+                    span:after
+                            transform: translateY(-10px) translateX(-50%)
+                    span:before
+                            transform: translateY(10px) translateX(-50%)
+                
+            .mob-menu
+                position: fixed
+                top: 0
+                left: 0
+                width: 250px
+                height: 100vh
+                background-color: #369
+                padding: 40px 30px 0 20px
+                transition: 0.3s
+                transform: translateX(-100%)
+                z-index: 1000
+                +mw(550px)
+                    width: 200px
+                    #mob-logo
+                        display: none
+                &_links
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+                    flex-direction: column
+                    padding-top: 40px
+                    +mw(550px)
+                        padding-top: 20px
+                    li
+                        height: 60px
+                        font-size: 1.4rem
+                        width: 150px
+                        a
+                            color: #fff
+
+
             +mw($m)
                 min-width: 55%
                 margin-left: 0
@@ -58,17 +137,21 @@ header
             +mw(630px)
                 min-width: 100%
                 margin-top: 20px
-            +mw(450px)
-                display: none
+
             
             .navlinks
                 display: flex
                 flex-wrap: wrap
                 justify-content: space-between
+                +mw(700px)
+                    display: none
                 a
                     color: #fff
                     font-weight: 300
                     font-size: 1.2rem
+                    transition: 0.2s
+                    &:hover
+                        color: #999
                     +mw($m)
                         font-size: 1rem
                         font-weight: bolder
@@ -123,5 +206,8 @@ header
                 font-weight: 900
                 font-size: 1.5rem
                 letter-spacing: 3px
+                transition: 0.3s
+            a:hover>span
+                text-shadow: 2px 2px 7px rgba(0,0,0,0.5)
 
 

@@ -36,15 +36,20 @@
             span
                 position: absolute
                 text-transform: uppercase
+                transition: 0.2s
                 +mw(970px)
                     font-size: 0.9rem
             #serv-button-text-1
                 top: 50%
                 left: 50%
                 transform: translateY(-50%) translateX(-50%)
+                &:hover
+                    text-shadow: 2px 2px 7px rgba(0,0,0,0.5)
             #serv-button-text-2
                 right: 25px
                 bottom: 22px
+                &:hover
+                    text-shadow: 2px 2px 7px rgba(0,0,0,0.5)
                 +mw(970px)
                     top: 35%
                     left: 14%
