@@ -11,3 +11,9 @@ $('#shade').on('click', function (){
     mobmenu.css({'transform' : 'translateX(-100%)'});
     $('#shade').css({'display' : 'none'});
 });
+
+$('#close').on('click', function (){
+    mobmenu.css({'transform' : 'translateX(-100%)'});
+    $('#shade').css({'display' : 'none'});
+});
+

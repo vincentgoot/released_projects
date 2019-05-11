@@ -5,35 +5,73 @@
     width: 100%
     height: 100%
     background-color: rgba(0,0,0, 0.6)
-    z-index: 100
+    z-index: 10
     display: none
     
 header
-    min-height: 940px
-    padding: 30px 50px 0
+    height: 100vh
     position: relative
-    +mw($m)
-        min-height: 768px
-    +mw(630px)
-        min-height: 600px
-    +mw(450px)
-        min-height: 400px
+    // background-color: #a29bfe
+    display: flex
+    align-items: center
+    justify-content: center
+
+    // +mw($m)
+    //     min-height: 768px
+    // +mw(630px)
+    //     min-height: 600px
+    // +mw(450px)
+    //     min-height: 400px
     .bg-video
+        margin: 0 auto
         position: absolute
         overflow: hidden
         top: 0
         left: 0
+        height: 100vh
         width: 100%
-        height: 100%
         z-index: -100
-        video
+        &:before
+            position: absolute
+            top: 0
+            left: 0
+            content: ''
+            display: block
+            width: 100%
             height: 100%
-            transform: translate(-10%)
+            background-color: rgba(0,0,0,0.5)
+            z-index: 100
+        video
+            width: 100%
+            position: relative
+            &:before
+                // position: absolute
+                // top: 0
+                // left: 0
+                // content: ''
+                // display: block
+                // width: 100%
+                // height: 100%
+                // background-color: rgba(0,0,0,0.9)
+                // z-index: 100
+            +mw(1060px)
+                height: 100%
+                width: auto
+            +mh(420px)
+                width: 100%
+                height: auto
+
     .navbar
         display: flex
         flex-wrap: wrap
         justify-content: space-between
         align-items: center
+        padding: 10px 20px 5px 30px
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 10
         +mw(700px)
             flex-direction: column
         .logo
@@ -128,6 +166,15 @@ header
                         a
                             color: #fff
 
+                
+                #close
+                    position: absolute
+                    top: 10px
+                    right: 20px
+                    color: #fff
+                    font-size: 2rem
+                    cursor: pointer
+
 
             +mw($m)
                 min-width: 55%
@@ -167,14 +214,13 @@ header
         .logo-right
             img
                 width: 3rem 
-                margin-right: -25px
                 +mw($s)
                     display: none      
 
 
     .main-header
         max-width: 510px
-        margin: 230px auto 0
+        margin: 0 auto
         +mw($s)
             margin: 100px auto 0
         +mw(450px)
