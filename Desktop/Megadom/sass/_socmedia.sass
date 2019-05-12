@@ -1,0 +1,29 @@
+.socmedia
+    min-height: 70px
+    background-color: #a2d9f7
+    display: flex
+    align-items: center
+    justify-content: center
+    .socmedia-list
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 90%
+        flex-wrap: wrap
+        padding: 20px 0
+        +mw(600px)
+            justify-content: center
+        .socmedia-list__item
+            min-width: 100px
+            width: 20%
+            text-align: center
+            +mw(600px)
+                min-width: 90%
+            a
+                color: $brand-color
+                width: 50px
+                transition: 0.2s
+                font-size: 1.5rem
+                &:hover
+                    color: #fff
+                
