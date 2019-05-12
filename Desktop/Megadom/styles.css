@@ -55,6 +55,10 @@ ul, li {
   .more-btn:hover {
     box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.32); }
 
+.showed {
+  opacity: 1;
+  transform: scale(1); }
+
 #shade {
   position: fixed;
   top: 0;
@@ -118,9 +122,11 @@ header {
     header .navbar .logo {
       color: #fff;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      width: 160px;
+      cursor: pointer; }
       header .navbar .logo img {
-        width: 3rem;
+        width: 100%;
         margin-right: 10px; }
       header .navbar .logo p {
         display: flex;
@@ -257,11 +263,38 @@ header {
               font-size: 1rem;
               font-weight: bolder;
               margin-left: 0; } }
-    header .navbar .logo-right img {
-      width: 3rem; }
-      @media (max-width: 768px) {
-        header .navbar .logo-right img {
-          display: none; } }
+    header .navbar .logo-right {
+      padding-top: 20px;
+      position: relative; }
+      header .navbar .logo-right .search-button {
+        display: block;
+        position: relative;
+        border-radius: 50%;
+        background-color: #1e5fba;
+        width: 50px;
+        height: 50px;
+        float: right;
+        cursor: pointer; }
+        header .navbar .logo-right .search-button:hover {
+          transform: scale(1.1); }
+        header .navbar .logo-right .search-button img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          width: 20px; }
+      header .navbar .logo-right .search {
+        position: absolute;
+        right: 0;
+        top: 85px; }
+        header .navbar .logo-right .search .search-input {
+          display: none;
+          height: 40px;
+          border-radius: 20px;
+          width: 200px;
+          padding: 5px 10px;
+          font-weight: bold;
+          font-size: 1.1rem; }
   header .main-header {
     max-width: 510px;
     margin: 0 auto; }
@@ -302,6 +335,65 @@ header {
         transition: 0.3s; }
       header .main-header .header-button a:hover > span {
         text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5); }
+
+.soc-list {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  .soc-list__item a {
+    color: #C5C6C6;
+    font-size: 1rem;
+    transition: 0.2s;
+    opacity: 0.6; }
+    .soc-list__item a:hover {
+      color: #fff;
+      opacity: 1; }
+
+.dots {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .dots span {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #c5c6c6;
+    transition: 0.2s;
+    opacity: 0.6;
+    cursor: pointer; }
+    .dots span:hover {
+      color: #fff;
+      opacity: 1; }
+
+.mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 200px; }
+  .mobile img {
+    width: 20px;
+    margin-bottom: 10px; }
+  .mobile span {
+    font-size: 1.3rem;
+    color: #1e5fba; }
 
 .services {
   width: 100%;
@@ -600,7 +692,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: #82828d; }
+    color: #2b2a29; }
     @media (max-width: 510px) {
       .conditions-list {
         justify-content: center; } }
@@ -656,12 +748,10 @@ header {
           .conditions-list .condition-list__inner img {
             width: 40%; } }
       .conditions-list .condition-list__inner h4 {
-        font-size: 1.2rem;
-        font-weight: lighter; }
+        font-size: 1.2rem; }
       .conditions-list .condition-list__inner p {
         width: 90%;
-        font-size: 0.8rem;
-        letter-spacing: 1px;
+        font-size: 1rem;
         line-height: 1.4;
         text-align: center; }
 

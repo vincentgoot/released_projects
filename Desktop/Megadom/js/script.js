@@ -17,3 +17,7 @@ $('#close').on('click', function (){
     $('#shade').css({'display' : 'none'});
 });
 
+
+$('.search-button').on('click', function(){
+    $('.search-input').toggle(100);
+});
