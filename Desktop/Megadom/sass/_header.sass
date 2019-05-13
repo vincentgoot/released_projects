@@ -11,13 +11,12 @@
 header
     height: 100vh
     position: relative
-    // background-color: #a29bfe
     display: flex
     align-items: center
     justify-content: center
 
-    // +mw($m)
-    //     min-height: 768px
+    +mh(550px)
+        min-height: 550px
     // +mw(630px)
     //     min-height: 600px
     // +mw(450px)
@@ -28,9 +27,10 @@ header
         overflow: hidden
         top: 0
         left: 0
-        height: 100vh
+        // height: 100vh
         width: 100%
-        z-index: -100
+        +mh(500px)
+            min-height: 500px
         &:before
             position: absolute
             top: 0
@@ -40,26 +40,45 @@ header
             width: 100%
             height: 100%
             background-color: rgba(0,0,0,0.5)
-            z-index: 100
-        video
-            width: 100%
+            z-index: 0
+        .bg-vid-item
             position: relative
-            &:before
-                // position: absolute
-                // top: 0
-                // left: 0
-                // content: ''
-                // display: block
-                // width: 100%
-                // height: 100%
-                // background-color: rgba(0,0,0,0.9)
-                // z-index: 100
-            +mw(1060px)
-                height: 100%
-                width: auto
-            +mh(420px)
+            video
                 width: 100%
-                height: auto
+                position: relative
+                +mw(1060px)
+                    height: 100vh
+                    width: auto
+                +mh(430px)
+                    width: 100%
+                    height: auto
+            .main-header
+                position: absolute
+                top: 40%
+                left: 50%
+                transform: translateX(-50%) translateY(-50%)
+                max-width: 510px
+                margin: 0 auto
+                +mw($s)
+                    margin: 100px auto 0
+                +mw(450px)
+                    margin: 50px auto 0
+
+                h1
+                    text-align: center
+                    color: #fff
+                    margin-bottom: 30px
+                    letter-spacing: 2px
+                    font-size: 48px
+                    +mw($m)
+                        font-size: 36px       
+                    +mw(460px)
+                        font-size: 25px
+                .header-button
+                    text-align: center
+                    position: relative
+                    width: 210px
+                    margin: 0 auto
 
     .navbar
         display: flex
@@ -250,43 +269,43 @@ header
 
 
 
-    .main-header
-        max-width: 510px
-        margin: 0 auto
-        +mw($s)
-            margin: 100px auto 0
-        +mw(450px)
-            margin: 50px auto 0
+    // .main-header
+    //     max-width: 510px
+    //     margin: 0 auto
+    //     +mw($s)
+    //         margin: 100px auto 0
+    //     +mw(450px)
+    //         margin: 50px auto 0
 
-        h1
-            text-align: center
-            color: #fff
-            margin-bottom: 30px
-            letter-spacing: 2px
-            font-size: 48px
-            +mw($m)
-                font-size: 36px       
-            +mw(460px)
-                font-size: 25px
-        .header-button
-            text-align: center
-            position: relative
-            width: 210px
-            margin: 0 auto
-            img
-                width: 100%
-            span
-                position: absolute
-                top: 16px
-                left: 42px
-                text-transform: uppercase
-                color: #fff
-                font-weight: 900
-                font-size: 1.5rem
-                letter-spacing: 3px
-                transition: 0.3s
-            a:hover>span
-                text-shadow: 2px 2px 7px rgba(0,0,0,0.5)
+    //     h1
+    //         text-align: center
+    //         color: #fff
+    //         margin-bottom: 30px
+    //         letter-spacing: 2px
+    //         font-size: 48px
+    //         +mw($m)
+    //             font-size: 36px       
+    //         +mw(460px)
+    //             font-size: 25px
+    //     .header-button
+    //         text-align: center
+    //         position: relative
+    //         width: 210px
+    //         margin: 0 auto
+    //         img
+    //             width: 100%
+    //         span
+    //             position: absolute
+    //             top: 16px
+    //             left: 42px
+    //             text-transform: uppercase
+    //             color: #fff
+    //             font-weight: 900
+    //             font-size: 1.5rem
+    //             letter-spacing: 3px
+    //             transition: 0.3s
+    //         a:hover>span
+    //             text-shadow: 2px 2px 7px rgba(0,0,0,0.5)
 
 
 .soc-list
@@ -337,7 +356,7 @@ header
     justify-content: center
     align-items: center
     position: absolute
-    top: 85%
+    bottom: 10px
     left: 50%
     transform: translateX(-50%)
     text-align: center
