@@ -1,0 +1,23 @@
+.dots
+    .slick-list
+        position: fixed
+        padding: 0 !important
+        position: relative
+        top: -700% !important
+        right: -49vw !important
+
+        .slick-track
+            display: flex !important
+            flex-direction: column
+            justify-content: space-between
+            height: 80px
+            width: 20px
+            transform: translate3d(0,0,0) !important
+            span
+                width: 10px !important
+                height: 10px !important
+            .slick-current
+                background-color: #2257b1
+
+.slick-dots li.slick-active button::before
+    display: none

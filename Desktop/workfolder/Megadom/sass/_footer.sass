@@ -1,0 +1,46 @@
+footer
+    background-color: $brand-color
+    padding: 50px 50px 30px
+    position: relative
+    text-align: center
+    .logo-footer
+        position: absolute
+        top: 25px
+        +mw(830px)
+            display: none
+        img
+            width: 150px
+    .link-lists
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+        width: 50%
+        margin: 0 auto
+        +mw(1080px)
+            width: 80%
+            padding-left: 100px
+        +mw(830px)
+            width: 100%
+            padding-left: 0
+        .link-list
+            text-align: left
+            +mw(600px)
+                width: 50%
+                padding-bottom: 30px
+            li
+                padding-bottom: 10px
+                a
+                    color: #0386cc
+
+    .copyright
+        color: #fff
+        font-size: 0.9rem
+        padding-top: 400px
+        text-align: left
+        position: relative
+        +mw(600px)
+            padding-top: 200px
+        #year
+            position: absolute
+            right: 20px

@@ -1,0 +1,42 @@
+.services
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    color: #fff
+    .service-item
+        width: 25%        
+        min-height: 250px
+        background-color: purple
+        padding: 30px 30px 15px 
+        text-align: justify
+        position: relative
+        font-size: 1.1rem
+        line-height: 1
+        +mw(970px)
+            width: 50%
+            line-height: 1
+        +mw(550px)
+            width: 100%
+            font-size: 1.3rem
+            line-height: 1
+            min-width: 330px
+
+        h2
+            font-size: 2rem 
+            margin-left: 10px
+    
+
+    #service-item-1
+        color: #2b2a29
+        background-color: #a2d9f7
+    #service-item-2
+        background-color: #1e5fba
+    #service-item-3
+        background-color: #393185
+    #service-item-4
+        background-color: #322a60
+
+    .service-button__button
+        position: absolute
+        bottom: 20px
+        right: 20px
